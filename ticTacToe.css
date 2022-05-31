@@ -1,0 +1,63 @@
+.board{
+    background-color: gray;
+    height: 500px;
+    width: 500px;
+    margin: 0 auto;
+    border: solid 8px;
+    border-radius: 10px;
+    border-color: #4F4F4F;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
+
+
+.board > div{
+    color: greenyellow;
+    border: solid 6px;
+    border-color: #4F4F4F;
+    border-radius: 2px;
+    font-family:  Helvetica;
+    font-weight: bold;
+    font-size: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#divButton{
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+}
+
+.restart{
+    color: #1C1C1C;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-decoration: none;
+    border: solid 2px;
+    font-size: 40px;
+    background-color: #00FF00;
+    border-radius: 5px;
+    border-color: darkgreen;
+}
+
+.restart:hover{
+    color: #1C1C1C;
+    font-size: 40px;
+    background-color: #32CD32;
+    border-radius: 5px;
+    border-color: darkgreen;
+}
+
+.restart:focus{
+    color: #1C1C1C;
+    font-size: 40px;
+    background-color: #32CD32;
+    border-radius: 5px;
+    border-color: darkgreen;
+}
+

@@ -1,0 +1,43 @@
+#welcome{
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 30px;
+    text-align: center;
+}
+
+#divButton{
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+}
+
+.btnStart{
+    color: #1C1C1C;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-decoration: none;
+    border: solid 2px;
+    font-size: 40px;
+    background-color: #00FF00;
+    border-radius: 5px;
+    border-color: darkgreen;
+}
+
+.btnStart:hover{
+    color: #1C1C1C;
+    font-size: 40px;
+    background-color: #32CD32;
+    border-radius: 5px;
+    border-color: darkgreen;
+}
+
+.btnStart:focus{
+    color: #1C1C1C;
+    font-size: 40px;
+    background-color: #32CD32;
+    border-radius: 5px;
+    border-color: darkgreen;
+}

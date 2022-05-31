@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ticTacToe.css">
+</head>
+<body>
+    <h2 id="playerTracker">X player turn!</h2>
+    <div class="board">
+
+    </div>
+    <br>
+    <div id="divButton">
+        <button class="btn restart" id="restartBtn">Restart</button>
+    </div>
+    
+    <script src="ticTacToe.js"></script>
+    <script>
+        game.init(document.querySelector('.board'));
+        game.start();
+        const restartElement = document.getElementById("restartBtn");
+        restartElement.onclick = function(){
+            game.start();
+        }        
+    </script>
+</body>
+</html>
