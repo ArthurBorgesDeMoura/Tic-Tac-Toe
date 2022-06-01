@@ -1,7 +1,8 @@
+
 const game = {
     board: ['', '', '', '', '', '', '', '', ''],
     simbols: {
-        players: ['X', 'O'],
+        players: ["<img height='130px' width='130px' src='/Tic-Tac-Toe/Images/x.png'>", "<img height='140px' width='140px' src='/Tic-Tac-Toe/Images/o.png'>"],
         index: 0,
         changePlayer: function () {
             this.index = (this.index === 0 ? 1 : 0);
@@ -48,7 +49,8 @@ const game = {
 
     endGame: function () {
         this.gameOver = true;
-        document.getElementById("playerTracker").innerHTML = this.simbols.players[this.simbols.index] + " Wins!";
+        document.getElementById("playerTracker").style.color = (this.simbols.index === 0 ? "#FF1616" : "#B8EA53");
+        document.getElementById("playerTracker").innerHTML = (this.simbols.index === 0 ? "X wins!" : "O Wins!");
     },
 
     checkWinner: function (simbol) {

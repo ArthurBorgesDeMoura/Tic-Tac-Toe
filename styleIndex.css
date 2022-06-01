@@ -1,43 +1,107 @@
-#welcome{
-    margin-right: auto;
-    margin-left: auto;
-    font-size: 30px;
-    text-align: center;
+body{
+    background-color: #E7FFFF;
 }
 
-#divButton{
+#bg{
+    margin-top: 25px;
+    margin-left: 425px;
+    opacity: 0.1;
+    position: absolute;
+    height: 700px;
+    width:700px;
+}
+#welcome{
+    position: absolute;
     display: flex;
-    margin-right: auto;
     margin-left: auto;
+    margin-right: auto;
     justify-content: center;
 }
 
+#tic{
+    position: relative;
+    margin-left: 530px;
+    margin-top: 100px;
+    font-size: 80px;
+    font-family: 'Spline Sans Mono', monospace;
+    color: #1C344C;
+
+}
+
+#tac{
+    position: relative;
+    margin-top: 105px;
+    margin-left: -10px;
+    font-size: 75px;
+    font-family: 'Spline Sans Mono', monospace;
+    color: #71A14D;
+
+}
+
+#toe{
+    position: relative;
+    margin-top: 107px;
+    margin-left: -10px;
+    font-size: 73px;
+    font-family: 'Spline Sans Mono', monospace;
+    color: #BD0000;
+
+}
+
+.dot{
+    position: relative;
+    margin-top: 140px;
+    margin-left: 3px;
+    width: 30px;
+    height: 30px;
+    background-color: #D29936;
+    border-radius: 50%;
+    
+}
+
+.dot2{
+    position: relative;
+    margin-top: 140px;
+    margin-left: 3px;
+    width: 30px;
+    height: 30px;
+    background-color: #D29936;
+    border-radius: 50%;
+}
+
 .btnStart{
+    position: absolute;
+    left: 726px;
+    top: 280px;
     color: #1C1C1C;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 3px;
-    padding-bottom: 3px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 0px;
     text-decoration: none;
+    text-align: center;
     border: solid 2px;
     font-size: 40px;
-    background-color: #00FF00;
-    border-radius: 5px;
-    border-color: darkgreen;
+    background-color: #A4D480;
+    border-radius: 20px;
+    border-color: #245400;
+    box-shadow:0 7px #8ABA66;
 }
 
 .btnStart:hover{
     color: #1C1C1C;
     font-size: 40px;
-    background-color: #32CD32;
-    border-radius: 5px;
-    border-color: darkgreen;
+    background-color: #A4D480;
+    border-color: #245400;
+    box-shadow:0 5px #71A14D;
+    transform: translateY(2px);
 }
 
 .btnStart:focus{
     color: #1C1C1C;
     font-size: 40px;
-    background-color: #32CD32;
-    border-radius: 5px;
-    border-color: darkgreen;
+    background-color: #A4D480;
+    border-color: #245400;
+    box-shadow: none;
+    transform: translateY(7px);
+
 }

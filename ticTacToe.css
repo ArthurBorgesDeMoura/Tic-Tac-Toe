@@ -1,20 +1,24 @@
+body{
+    background-color: #E7FFFF;
+}
 .board{
-    background-color: gray;
+    background-color: #356388;
     height: 500px;
     width: 500px;
     margin: 0 auto;
     border: solid 8px;
+
     border-radius: 10px;
-    border-color: #4F4F4F;
+    border-color: #1d3549;
     display: grid;
     grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    
 }
 
 
 .board > div{
-    color: greenyellow;
     border: solid 6px;
-    border-color: #4F4F4F;
+    border-color: #1d3549;
     border-radius: 2px;
     font-family:  Helvetica;
     font-weight: bold;
@@ -22,6 +26,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
+}
+
+#playerTracker{
+    color: #200000;
+    position: absolute;
+    top: 25%;
+    left: 40px;
+    font-size: 60px;
+    font-weight: bold;
 }
 
 #divButton{
@@ -32,32 +46,38 @@
 }
 
 .restart{
+    position: absolute;
     color: #1C1C1C;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 3px;
-    padding-bottom: 3px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 0px;
     text-decoration: none;
+    text-align: center;
     border: solid 2px;
     font-size: 40px;
-    background-color: #00FF00;
-    border-radius: 5px;
-    border-color: darkgreen;
+    background-color: #A4D480;
+    border-radius: 20px;
+    border-color: #245400;
+    box-shadow:0 7px #8ABA66;
 }
 
 .restart:hover{
     color: #1C1C1C;
     font-size: 40px;
-    background-color: #32CD32;
-    border-radius: 5px;
-    border-color: darkgreen;
+    background-color: #A4D480;
+    border-color: #245400;
+    box-shadow:0 5px #71A14D;
+    transform: translateY(2px);
 }
 
 .restart:focus{
     color: #1C1C1C;
     font-size: 40px;
-    background-color: #32CD32;
-    border-radius: 5px;
-    border-color: darkgreen;
+    background-color: #A4D480;
+    border-color: #245400;
+    box-shadow: none;
+    transform: translateY(7px);
+
 }
+
 
