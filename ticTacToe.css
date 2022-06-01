@@ -29,7 +29,23 @@ body{
     
 }
 
+#playerDiv{
+    height: 30px;
+}
+
+#referee{
+    position: absolute;
+    top: 31%;
+    left: 50px;
+}
+
 #playerTracker{
+    border: solid 4px;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
     color: #200000;
     position: absolute;
     top: 25%;

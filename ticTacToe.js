@@ -1,10 +1,9 @@
-
 const game = {
     board: ['', '', '', '', '', '', '', '', ''],
     simbols: {
         players: ["<img height='130px' width='130px' src='/Tic-Tac-Toe/Images/x.png'>", "<img height='140px' width='140px' src='/Tic-Tac-Toe/Images/o.png'>"],
         index: 0,
-        changePlayer: function () {
+        changePlayer: function () {  //Function that changes the player thats it's going to make the play, and display it on the screen
             this.index = (this.index === 0 ? 1 : 0);
             let x = "X player turn!";
             let o = "O player turn!";
@@ -13,7 +12,7 @@ const game = {
     },
     container: null,
     gameOver: false,
-    winningWays: [
+    winningWays: [  //Array with every possible winning sequence
         [0, 1, 2],
         [0, 3, 6],
         [0, 4, 8],
@@ -24,11 +23,11 @@ const game = {
         [6, 7, 8]
     ],
 
-    init: function (container_creator) {
+    init: function (container_creator) { //Initicial function
         this.container = container_creator;
     },
 
-    play: function (position) {
+    play: function (position) {  // Function that let the user make a play and verify if the game is over with a winner or a draw
         if (this.gameOver) return false;
         if (this.board[position] === '') {
             this.board[position] = this.simbols.players[this.simbols.index];
@@ -47,13 +46,13 @@ const game = {
         }
     },
 
-    endGame: function () {
+    endGame: function () {  //Function that ends the game and display the winner on the screen
         this.gameOver = true;
         document.getElementById("playerTracker").style.color = (this.simbols.index === 0 ? "#FF1616" : "#B8EA53");
         document.getElementById("playerTracker").innerHTML = (this.simbols.index === 0 ? "X wins!" : "O Wins!");
     },
 
-    checkWinner: function (simbol) {
+    checkWinner: function (simbol) {  //Function that uses the winning sequences to verify if there is a winner
         for (i in this.winningWays) {
             if (this.board[this.winningWays[i][0]] == simbol &&
                 this.board[this.winningWays[i][1]] == simbol &&
@@ -65,7 +64,7 @@ const game = {
 
     },
 
-    checkTie: function () {
+    checkTie: function () { //Function that verify if the game has ended without a winner (tie) and display it on the screen
         let blank = this.board.indexOf('');
         if (blank == -1) {
             this.gameOver = true;
@@ -74,7 +73,7 @@ const game = {
         return -1;
     },
 
-    draw: function () {
+    draw: function () { //Function that draws the board on the screen
         let slot = '';
         for (i in this.board) {
             slot += '<div onclick ="game.play(' + i + ')">' + this.board[i] + '</div>';
@@ -82,10 +81,12 @@ const game = {
         this.container.innerHTML = slot;
     },
 
-    start: function () {
+    start: function () { //Function that starts and restarts the game
         this.board.fill('');
         this.draw();
         this.gameOver = false;
+        document.getElementById("playerTracker").style.color = "#200000";
+        document.getElementById("playerTracker").innerHTML = (this.simbols.index === 0 ? "X player turn!" : "O player turn!");
         
     }
 };
